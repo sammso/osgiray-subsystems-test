@@ -1,0 +1,7 @@
+Bundle-Name: org.osgiray.subsystems.serviceone.service
+Bundle-SymbolicName: org.osgiray.subsystems.serviceone.service
+Bundle-Version: 1.0.0
+-metatype: *
+-plugin.metatype: com.liferay.ant.bnd.metatype.MetatypePlugin
+Bundle-Activator: org.osgiray.subsystems.serviceone.impl.Activator
+-privatepackage: org.osgiray.subsystems.serviceone.impl

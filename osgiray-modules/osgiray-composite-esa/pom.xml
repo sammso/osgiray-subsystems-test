@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.osgiray.subsystems</groupId>
+		<artifactId>org.osgiray.subsystems.modules</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>org.osgiray.subsystems.composite</artifactId>
+	<packaging>esa</packaging>
+	<name>OSGiRay - Subsystems - ESA Composite One deployment package</name>
+	<dependencies>
+		<dependency>
+			<groupId>org.osgiray.subsystems</groupId>
+			<artifactId>org.osgiray.subsystems.serviceone.api</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.osgiray.subsystems</groupId>
+			<artifactId>org.osgiray.subsystems.serviceone.service</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.osgiray.subsystems</groupId>
+			<artifactId>org.osgiray.subsystems.portletone</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.aries</groupId>
+				<artifactId>esa-maven-plugin</artifactId>
+				<version>1.0.2</version>
+				<extensions>true</extensions>
+				<configuration>
+					<generateManifest>true</generateManifest>
+					<startOrder>dependencies</startOrder>
+					<instructions>
+                        <Import-Package>javax.portlet, javax.servlet, org.apache.felix.service.command, org.osgi.dto, org.osgi.framework, org.osgi.framework.dto, org.osgi.framework.startlevel, org.osgi.framework.wiring, org.osgi.service.component, org.osgi.service.component.runtime, org.osgi.service.component.runtime.dto, org.osgi.service.packageadmin, org.osgi.util.tracker</Import-Package>
+						<Export-Package>org.osgiray.subsystems.serviceone.api;version=1.0.0</Export-Package>
+						<Subsystem-ImportService>org.osgi.service.log.LogService,org.osgi.service.log.LoggerFactory,org.eclipse.equinox.log.ExtendedLogService,com.liferay.portal.osgi.web.servlet.context.helper.ServletContextHelperRegistration</Subsystem-ImportService>
+						<Subsystem-ExportService>java.lang.Object, javax.portlet.Portlet, javax.servlet.Servlet, javax.servlet.ServletContext, javax.servlet.ServletContextListener, org.osgi.service.http.context.ServletContextHelper</Subsystem-ExportService>
+						<Require-Capability>osgi.extender;filter:="(&amp;(osgi.extender=osgi.component)(version>=1.3.0)(!(version>=2.0.0)))"</Require-Capability>
+						<Provide-Capability>osgi.service;objectClass:List&lt;String&gt;="javax.portlet.Portlet";uses:="javax.portlet"</Provide-Capability>
+						<Subsystem-Type>osgi.subsystem.composite</Subsystem-Type>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,6 @@
+Bundle-Name: org.osgiray.subsystems.servicetwo.service
+Bundle-SymbolicName: org.osgiray.subsystems.servicetwo.service
+Bundle-Version: 1.0.0
+-metatype: *
+-plugin.metatype: com.liferay.ant.bnd.metatype.MetatypePlugin
+-privatepackage: org.osgiray.subsystems.servicetwo.impl

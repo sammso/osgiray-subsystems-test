@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.osgiray.subsystems</groupId>
+		<artifactId>org.osgiray.subsystems.modules</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>org.osgiray.subsystems.featuretwo</artifactId>
+	<packaging>esa</packaging>
+	<name>OSGiRay - Subsystems - ESA Feature Two deployment package</name>
+	<dependencies>
+		<dependency>
+			<groupId>org.osgiray.subsystems</groupId>
+			<artifactId>org.osgiray.subsystems.servicetwo.api</artifactId>
+			<version>1.0.0</version>
+		</dependency>	
+		<dependency>
+			<groupId>org.osgiray.subsystems</groupId>
+			<artifactId>org.osgiray.subsystems.servicetwo.service</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.osgiray.subsystems</groupId>
+			<artifactId>org.osgiray.subsystems.portlettwo</artifactId>
+			<version>1.0.0</version>
+		</dependency>		
+	</dependencies>	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.aries</groupId>
+				<artifactId>esa-maven-plugin</artifactId>
+				<version>1.0.2</version>
+				<extensions>true</extensions>
+				<configuration>
+					<generateManifest>true</generateManifest>
+					<startOrder>dependencies</startOrder>
+					<instructions>
+						<Subsystem-Type>osgi.subsystem.feature</Subsystem-Type>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,6 @@
+Bundle-Name: org.osgiray.subsystems.servicetwo.api
+Bundle-SymbolicName: org.osgi.subsystem.servicetwo
+Bundle-Version: 1.0.0
+Export-Package: org.osgi.subsystem.servicetwo
+-metatype: *
+-plugin.metatype: com.liferay.ant.bnd.metatype.MetatypePlugin

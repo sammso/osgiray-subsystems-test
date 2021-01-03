@@ -1,0 +1,8 @@
+Bundle-Name: org.osgiray.subsystems.serviceone.api
+Bundle-SymbolicName: org.osgi.subsystem.serviceone.api
+Bundle-Version: 1.0.0
+Export-Package: org.osgi.subsystem.serviceone
+-metatype: *
+-plugin.metatype: com.liferay.ant.bnd.metatype.MetatypePlugin
+Bundle-Activator: org.osgi.subsystem.serviceone.init.Activator
+-privatepackage: org.osgi.subsystem.serviceone.init

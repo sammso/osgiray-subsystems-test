@@ -1,0 +1,7 @@
+Bundle-Name: org.osgiray.subsystems.portletone
+Bundle-SymbolicName: org.osgiray.subsystems.portletone
+Bundle-Version: 1.0.0
+-metatype: *
+-plugin.metatype: com.liferay.ant.bnd.metatype.MetatypePlugin
+Bundle-Activator: org.osgiray.subsystems.portletone.Activator
+-privatepackage: org.osgiray.subsystems.portletone
