@@ -2,20 +2,31 @@
 
 ## Overview
 
-To read:
+Documentation:
 
-* https://liferay.dev/blogs/-/blogs/osgi-subsystems-and-why-you-want-them ( good blog post)
+* https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.subsystem.html ( Subsystem Service Specification )
+* https://liferay.dev/blogs/-/blogs/osgi-subsystems-and-why-you-want-them ( Good blog post and was also my starting point )
+* http://aries.apache.org/modules/subsystems.html
+* http://coderthoughts.blogspot.com/2013/04/osgi-subsystems.html
 
-Code repos:
+Example code repos:
 
 * https://github.com/coderthoughts/subsystem-examples
-* 
+* https://github.com/dnebing/subsystem-sample
 
 ## Prerequisites
 
 ### Install Liferay
 
 Install Liferay 7.3.6 or DXP 7.3
+
+Make sure that gogo shell is enabled, but adding 
+
+```
+module.framework.properties.osgi.console=0.0.0.0:11311
+```
+
+to `portal-ext.properties`.
 
 ### Deploy additional artifacts
 
@@ -52,8 +63,15 @@ Goto gogo shell:
 
 Deploy esa:
 
-Subsystem type : application 
+Subsystem type : feature 
 
 ```
-subsystem:install file://<your osgiray-subsystem location>/osgiray-application-esa/target/org.osgiray.subsystems.application-1.0.0.esa
+g! subsystem:install file:<this path here>/osgiray-modules/osgiray-feature-esa/target/org.osgiray.subsystems.feature-1.0.0.esa
 ```
+
+Subsystem type: composite
+
+```
+g! subsystem:install file:<this path here>/osgiray-modules/osgiray-composite-esa/target/org.osgiray.subsystems.composite-1.0.0.esa
+```
+
