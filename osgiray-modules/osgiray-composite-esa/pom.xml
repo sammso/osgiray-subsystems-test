@@ -38,12 +38,47 @@
 					<generateManifest>true</generateManifest>
 					<startOrder>dependencies</startOrder>
 					<instructions>
-                        <Import-Package>javax.portlet, javax.servlet, org.apache.felix.service.command, org.osgi.dto, org.osgi.framework, org.osgi.framework.dto, org.osgi.framework.startlevel, org.osgi.framework.wiring, org.osgi.service.component, org.osgi.service.component.runtime, org.osgi.service.component.runtime.dto, org.osgi.service.packageadmin, org.osgi.util.tracker</Import-Package>
-						<Export-Package>org.osgiray.subsystems.serviceone.api;version=1.0.0</Export-Package>
+					 
+                        <Import-Package>
+                        	javax.portlet,
+                        	javax.servlet,
+                        	org.osgi.framework
+                        </Import-Package>					
+				
+<!--
+                        <Import-Package>
+                        	javax.portlet, 
+                        	javax.servlet, 
+                        	org.apache.felix.service.command, 
+                        	org.osgi.dto, 
+                        	org.osgi.framework, 
+                        	org.osgi.framework.dto, 
+                        	org.osgi.framework.startlevel, 
+                        	org.osgi.framework.wiring, 
+                        	org.osgi.service.component, 
+                        	org.osgi.service.component.runtime, 
+                        	org.osgi.service.component.runtime.dto, 
+                        	org.osgi.service.packageadmin, 
+                        	org.osgi.util.tracker
+                        </Import-Package>
+-->	                         
+						<Export-Package>
+							org.osgiray.subsystems.serviceone.api;version=1.0.0
+						</Export-Package>
+						<!--  Required, but which level unknown -->
+						<!-- 						  
 						<Subsystem-ImportService>org.osgi.service.log.LogService,org.osgi.service.log.LoggerFactory,org.eclipse.equinox.log.ExtendedLogService,com.liferay.portal.osgi.web.servlet.context.helper.ServletContextHelperRegistration</Subsystem-ImportService>
+						 -->
+						<!--  Required, but which level unknown -->
+						<!--
 						<Subsystem-ExportService>java.lang.Object, javax.portlet.Portlet, javax.servlet.Servlet, javax.servlet.ServletContext, javax.servlet.ServletContextListener, org.osgi.service.http.context.ServletContextHelper</Subsystem-ExportService>
-						<Require-Capability>osgi.extender;filter:="(&amp;(osgi.extender=osgi.component)(version>=1.3.0)(!(version>=2.0.0)))"</Require-Capability>
+						-->
+						<Subsystem-ImportService>*</Subsystem-ImportService>
+						<Subsystem-ExportService>*</Subsystem-ExportService>
+						<Require-Capability>osgi.extender;filter:="(&amp;(osgi.extender=osgi.component)(version>=1.3.0)(!(version>=2.0.0)))", osgi.ee;filter:="(&amp;(osgi.ee=JavaSE)(version=1.8))"</Require-Capability>
+
 						<Provide-Capability>osgi.service;objectClass:List&lt;String&gt;="javax.portlet.Portlet";uses:="javax.portlet"</Provide-Capability>
+
 						<Subsystem-Type>osgi.subsystem.composite</Subsystem-Type>
 					</instructions>
 				</configuration>

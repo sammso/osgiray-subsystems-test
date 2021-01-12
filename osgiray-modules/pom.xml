@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.osgiray.subsystems</groupId>
@@ -10,16 +12,16 @@
 	<artifactId>org.osgiray.subsystems.modules</artifactId>
 	<name>OSGiRay - Subsystems - Modules</name>
 	<packaging>pom</packaging>
-  <modules>
-    <module>osgiray-serviceone-api</module>
-    <module>osgiray-servicetwo-api</module>
-    <module>osgiray-serviceone-service</module>
-    <module>osgiray-servicetwo-service</module>
-    <module>osgiray-portlet-one</module>
-    <module>osgiray-portlet-two</module>
-    <module>osgiray-application-esa</module>
-    <module>osgiray-composite-esa</module>
-    <module>osgiray-feature-esa</module>
-    <module>osgiray-featuretwo-esa</module>
-  </modules>
+	<modules>
+		<module>osgiray-serviceone-api</module>
+		<module>osgiray-servicetwo-api</module>
+		<module>osgiray-serviceone-service</module>
+		<module>osgiray-servicetwo-service</module>
+		<module>osgiray-portlet-one</module>
+		<module>osgiray-portlet-two</module>
+		<module>osgiray-application-esa</module>
+		<module>osgiray-composite-esa</module>
+		<module>osgiray-feature-esa</module>
+		<module>osgiray-featuretwo-esa</module>
+	</modules>
 </project>
