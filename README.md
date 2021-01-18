@@ -30,18 +30,20 @@ to `portal-ext.properties`.
 
 ### Deploy additional artifacts
 
-Deploy following artifacts to your DXP
+Deploy following artifacts to your DXP.
 
-| Group ID                   | Artifact ID                             | Version                  | Link                                                         |
+Download all the files to your Liferay deploy folder.
+
+| Group ID                   | Artifact ID                             | Version                  | wget command to download                                                         |
 | -------------------------- | --------------------------------------- | ------------------------ | ------------------------------------------------------------ |
-| org.apache.aries.subsystem | org.apache.aries.subsystem.api          | 2.0.10                   | ` wget https://repo1.maven.org/maven2/org/apache/aries/subsystem/org.apache.aries.subsystem.api/2.0.10/org.apache.aries.subsystem.api-2.0.10.jar ` |
+| org.apache.aries.subsystem | org.apache.aries.subsystem.api          | 2.0.10                   | `wget https://repo1.maven.org/maven2/org/apache/aries/subsystem/org.apache.aries.subsystem.api/2.0.10/org.apache.aries.subsystem.api-2.0.10.jar ` |
 | org.apache.aries.subsystem | org.apache.aries.subsystem.core         | 2.0.10                   | `wget https://repo1.maven.org/maven2/org/apache/aries/subsystem/org.apache.aries.subsystem.core/2.0.10/org.apache.aries.subsystem.core-2.0.10.jar` |
 | org.apache.aries           | org.apache.aries.util                   | 1.1.3                    | `wget https://repo1.maven.org/maven2/org/apache/aries/org.apache.aries.util/1.1.3/org.apache.aries.util-1.1.3.jar` |
-| org.apache.felix           | org.apache.felix.coordinator            | 1.0.0                    | `wget http://repo1.maven.org/maven2/org/apache/felix/org.apache.felix.coordinator/1.0.0/org.apache.felix.coordinator-1.0.0.jar` |
-| org.eclipse.equinox        | org.eclipse.equinox.region              | 1.2.101.v20150831-1342   | `wget [http://repo1.maven.org/maven2/org/eclipse/equinox /org.eclipse.equinox.region/1.2.101.v20150831-1342/org.eclipse.equinox.region-1.2.101.v20150831-1342.jar` |
-| org.slf4j                  | slf4j-api                               | 1.7.30                   | `wget <https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar>` |
-| org.apache.aries.subsystem | org.apache.aries.subsystem.gogo-command | 1.0.0                    | `wget [https://repo1.maven.org/maven2/org/apache/aries/subsystem /org.apache.aries.subsystem.gogo-command/1.0.0/org.apache.aries.subsystem.gogo-command-1.0.0.jar` |
-| com.liferay                | org.apache.felix.fileinstall            | 3.6.4.LIFERAY-PATCHED-24 | wget `https://repo1.maven.org/maven2/com/liferay/org.apache.felix.fileinstall/3.6.4.LIFERAY-PATCHED-24/org.apache.felix.fileinstall-3.6.4.LIFERAY-PATCHED-24.jar` |
+| org.apache.felix           | org.apache.felix.coordinator            | 1.0.0                    | `wget https://repo1.maven.org/maven2/org/apache/felix/org.apache.felix.coordinator/1.0.0/org.apache.felix.coordinator-1.0.0.jar` |
+| org.eclipse.equinox        | org.eclipse.equinox.region              | 1.2.101.v20150831-1342   | `wget https://repo1.maven.org/maven2/org/eclipse/equinox/org.eclipse.equinox.region/1.2.101.v20150831-1342/org.eclipse.equinox.region-1.2.101.v20150831-1342.jar` |
+| org.slf4j                  | slf4j-api                               | 1.7.30                   | `wget https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar` |
+| org.apache.aries.subsystem | org.apache.aries.subsystem.gogo-command | 1.0.0                    | `wget https://repo1.maven.org/maven2/org/apache/aries/subsystem/org.apache.aries.subsystem.gogo-command/1.0.0/org.apache.aries.subsystem.gogo-command-1.0.0.jar` |
+| com.liferay                | org.apache.felix.fileinstall            | 3.6.4.LIFERAY-PATCHED-24 | `wget https://repo1.maven.org/maven2/com/liferay/org.apache.felix.fileinstall/3.6.4.LIFERAY-PATCHED-24/org.apache.felix.fileinstall-3.6.4.LIFERAY-PATCHED-24.jar` |
 
 Build:
 
